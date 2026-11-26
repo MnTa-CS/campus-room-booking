@@ -32,7 +32,7 @@ A screenshot was taken for each result.
 
 | Check | Expected | Actual | Result | Figure |
 |---|---|---|---|---|
-| Import of `campus_room_booking.sql` | Import finishes; all 30 statements executed | "Import has been successfully finished, 30 queries executed" | Pass | `01_import_success.png` |
+| Import of `campus_room_booking.sql` | Import finishes; all 30 statements executed | "Import has been successfully finished, 30 queries executed" | Pass | `01_import_log.txt` |
 | Stored procedures (`SHOW PROCEDURE STATUS`) | 2 procedures | `sp_approve_booking`, `sp_validate_booking` | Pass | `02_procedures.png` |
 | Triggers (`SHOW TRIGGERS`) | 2 triggers | `trg_bookings_before_insert`, `trg_bookings_before_update` | Pass | `03_triggers.png` |
 | Row counts | roles 2, users 8, rooms 8, facilities 4, room_facilities 20, bookings 13 | 2, 8, 8, 4, 20, 13 | Pass | `04_counts.png` |
