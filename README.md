@@ -12,7 +12,8 @@ Stack: MySQL/MariaDB (XAMPP), PHP (PDO), HTML/CSS/Bootstrap.
 | `test_conflict.sql` | 13 tests for the booking rules (run one block at a time) |
 | `erd.png`, `erd.mmd` | Entity Relationship Diagram (picture + Mermaid source) |
 | `DATABASE_DESIGN_GUIDE.md` | Design explanation, normalization, transactions, validation checklist, backend handover |
-| `test-evidence/` | Screenshots and logs of test runs |
+| `TESTING_SECTION.md` | Testing section for the report (method, results, figures) |
+| `test-evidence/` | Screenshots and logs of test runs (figures for `TESTING_SECTION.md`) |
 
 ## Setup
 1. Start Apache and MySQL in XAMPP.
