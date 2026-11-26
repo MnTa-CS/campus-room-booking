@@ -1,0 +1,56 @@
+erDiagram
+    roles ||--o{ users : "has"
+    buildings ||--o{ rooms : "contains"
+    rooms ||--o{ room_facilities : "offers"
+    facilities ||--o{ room_facilities : "is offered in"
+    users ||--o{ bookings : "requests"
+    users |o--o{ bookings : "handles"
+    rooms ||--o{ bookings : "is booked in"
+
+    roles {
+        TINYINT role_id PK
+        VARCHAR role_name UK
+    }
+    users {
+        INT user_id PK
+        TINYINT role_id FK
+        VARCHAR full_name
+        VARCHAR campus_id UK
+        VARCHAR department
+        VARCHAR password_hash
+        DATETIME created_at
+    }
+    buildings {
+        SMALLINT building_id PK
+        VARCHAR building_name UK
+    }
+    rooms {
+        INT room_id PK
+        SMALLINT building_id FK
+        VARCHAR room_name
+        TINYINT floor
+        ENUM room_type
+        SMALLINT capacity
+    }
+    facilities {
+        SMALLINT facility_id PK
+        VARCHAR facility_name UK
+    }
+    room_facilities {
+        INT room_id PK, FK
+        SMALLINT facility_id PK, FK
+    }
+    bookings {
+        INT booking_id PK
+        INT user_id FK "requester"
+        INT room_id FK
+        DATE booking_date
+        TIME start_time
+        TIME end_time
+        VARCHAR purpose
+        SMALLINT attendee_count
+        ENUM status
+        DATETIME created_at
+        INT handled_by FK "administrator, nullable"
+        DATETIME handled_at "nullable"
+    }

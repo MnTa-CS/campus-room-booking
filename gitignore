@@ -1,0 +1,9 @@
+# Local database credentials - never commit these
+config.local.php
+.env
+
+# Editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
